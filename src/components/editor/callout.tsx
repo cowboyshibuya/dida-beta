@@ -39,7 +39,10 @@ export const Callout = Node.create({
   renderHTML({ HTMLAttributes }) {
     return [
       'div',
-      mergeAttributes(HTMLAttributes, { 'data-type': 'callout', class: 'callout' }),
+      mergeAttributes(HTMLAttributes, {
+        'data-type': 'callout',
+        class: 'callout',
+      }),
       0,
     ]
   },

@@ -23,7 +23,15 @@ export function Toolbar({
       )}
       <div className="crumbs">
         {crumbs.map((c, i) => (
-          <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, minWidth: 0 }}>
+          <span
+            key={i}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              minWidth: 0,
+            }}
+          >
             {i > 0 && (
               <span className="sep">
                 <Icon name="chevR" size={13} />

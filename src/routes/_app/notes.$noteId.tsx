@@ -5,7 +5,12 @@ import { Toolbar } from '@/components/toolbar'
 import { Icon } from '@/components/icon'
 import { Editor, type NoteContentPatch } from '@/components/editor/editor'
 import { TagEditor } from '@/components/editor/tag-editor'
-import { useNote, useUpdateNote, useTogglePin, useTrashNote } from '../../../lib/notes'
+import {
+  useNote,
+  useUpdateNote,
+  useTogglePin,
+  useTrashNote,
+} from '../../../lib/notes'
 import { timeAgo, readingTime } from '../../../lib/format'
 import type { Id } from '../../../convex/_generated/dataModel'
 
@@ -86,7 +91,11 @@ function NoteEditor() {
               aria-label="Pin note"
               onClick={() => togglePin({ id })}
             >
-              <Icon name="star" size={16} fill={note.pinned ? 'currentColor' : 'none'} />
+              <Icon
+                name="star"
+                size={16}
+                fill={note.pinned ? 'currentColor' : 'none'}
+              />
             </button>
             <button className="tb-btn" aria-label="Share">
               <Icon name="share" size={16} />

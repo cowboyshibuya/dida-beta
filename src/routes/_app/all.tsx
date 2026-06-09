@@ -14,9 +14,15 @@ function Thumb({ note }: { note: Doc<'notes'> }) {
   if (note.type === 'code')
     return (
       <div className="lv-thumb code">
-        <div className="ln" style={{ width: '60%', background: 'var(--syn-fn)' }} />
+        <div
+          className="ln"
+          style={{ width: '60%', background: 'var(--syn-fn)' }}
+        />
         <div className="ln" style={{ width: '85%' }} />
-        <div className="ln" style={{ width: '45%', background: 'var(--syn-num)' }} />
+        <div
+          className="ln"
+          style={{ width: '45%', background: 'var(--syn-num)' }}
+        />
         <div className="ln" style={{ width: '70%' }} />
       </div>
     )
@@ -103,7 +109,11 @@ function AllNotes() {
         ) : (
           <div className="lv-grid">
             {notes.map((n) => (
-              <button key={n._id} className="lv-card" onClick={() => open(n._id)}>
+              <button
+                key={n._id}
+                className="lv-card"
+                onClick={() => open(n._id)}
+              >
                 <div className="t">{n.title.trim() || 'Untitled'}</div>
                 <div className="s">{n.snippet || 'No additional text'}</div>
                 <div className="m">

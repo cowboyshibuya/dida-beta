@@ -34,7 +34,10 @@ function BrandMenu() {
         <Icon name="chevD" size={13} style={{ opacity: 0.5 }} />
       </button>
       {open && (
-        <div className="menu" style={{ position: 'absolute', top: 30, left: 0 }}>
+        <div
+          className="menu"
+          style={{ position: 'absolute', top: 30, left: 0 }}
+        >
           <button className="menu-item" onClick={() => go('/notes')}>
             <Icon name="doc" size={15} /> Notes
           </button>
@@ -147,7 +150,8 @@ export function Sidebar() {
         </button>
       </div>
       <div className="sb-list">
-        {notes === undefined ? null : rest.length === 0 && pinned.length === 0 ? (
+        {notes === undefined ? null : rest.length === 0 &&
+          pinned.length === 0 ? (
           <div
             style={{
               padding: '10px 14px',
@@ -167,7 +171,14 @@ export function Sidebar() {
       <div className="sb-foot">
         <button
           className="note-row"
-          style={{ display: 'flex', alignItems: 'center', gap: 9, padding: 0, margin: 0, flex: 1 }}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 9,
+            padding: 0,
+            margin: 0,
+            flex: 1,
+          }}
           onClick={() => navigate({ to: '/notes' })}
         >
           <div className="ava">D</div>

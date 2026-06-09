@@ -1,6 +1,5 @@
-import { query } from "./_generated/server";
-import { getUserId } from "./auth";
-
+import { query } from './_generated/server'
+import { getUserId } from './auth'
 
 // Tags are derived from notes (no separate table). Returns each tag with its
 // note count and a few sample note titles for the Tags view cards.

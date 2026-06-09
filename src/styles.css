@@ -1,66 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:is(.dark *));
 
 .app {
-    --font-ui: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+  --font-ui:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
     'Helvetica Neue', system-ui, sans-serif;
-    --font-serif: 'Newsreader', Georgia, 'Iowan Old Style', serif;
-    --font-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, 'Menlo', monospace;
-    --font-body: var(--font-ui);
+  --font-serif: 'Newsreader', Georgia, 'Iowan Old Style', serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, 'Menlo', monospace;
+  --font-body: var(--font-ui);
 
-    --bg: #ffffff;
-    --bg-app: #f4f3f1;
-    --bg-sidebar: #f7f6f3;
-    --bg-sidebar-2: #f2f0ec;
-    --bg-elevated: #ffffff;
-    --bg-hover: rgba(20, 18, 14, 0.045);
-    --bg-active: rgba(20, 18, 14, 0.07);
-    --bg-sel: color-mix(in oklab, var(--accent) 12%, transparent);
+  --bg: #ffffff;
+  --bg-app: #f4f3f1;
+  --bg-sidebar: #f7f6f3;
+  --bg-sidebar-2: #f2f0ec;
+  --bg-elevated: #ffffff;
+  --bg-hover: rgba(20, 18, 14, 0.045);
+  --bg-active: rgba(20, 18, 14, 0.07);
+  --bg-sel: color-mix(in oklab, var(--accent) 12%, transparent);
 
-    --text: #1b1a18;
-    --text-2: #6c6962;
-    --text-3: #9c988f;
-    --text-faint: #c2bdb3;
+  --text: #1b1a18;
+  --text-2: #6c6962;
+  --text-3: #9c988f;
+  --text-faint: #c2bdb3;
 
-    --border: rgba(20, 18, 14, 0.08);
-    --border-2: rgba(20, 18, 14, 0.12);
-    --divider: rgba(20, 18, 14, 0.06);
+  --border: rgba(20, 18, 14, 0.08);
+  --border-2: rgba(20, 18, 14, 0.12);
+  --divider: rgba(20, 18, 14, 0.06);
 
-    --accent: oklch(0.585 0.135 292);
-    --accent-press: oklch(0.52 0.14 292);
-    --accent-soft: color-mix(in oklab, var(--accent) 14%, var(--bg));
-    --accent-text: var(--accent);
+  --accent: oklch(0.585 0.135 292);
+  --accent-press: oklch(0.52 0.14 292);
+  --accent-soft: color-mix(in oklab, var(--accent) 14%, var(--bg));
+  --accent-text: var(--accent);
 
-    --highlight: rgba(232, 176, 72, 0.34);
-    --highlight-strong: rgba(214, 150, 40, 0.55);
+  --highlight: rgba(232, 176, 72, 0.34);
+  --highlight-strong: rgba(214, 150, 40, 0.55);
 
-    --code-bg: #f7f6f3;
-    --code-border: rgba(20, 18, 14, 0.07);
-    --callout-bg: color-mix(in oklab, var(--accent) 7%, var(--bg));
-    --callout-border: color-mix(in oklab, var(--accent) 30%, transparent);
-    --quote-bar: var(--border-2);
+  --code-bg: #f7f6f3;
+  --code-border: rgba(20, 18, 14, 0.07);
+  --callout-bg: color-mix(in oklab, var(--accent) 7%, var(--bg));
+  --callout-border: color-mix(in oklab, var(--accent) 30%, transparent);
+  --quote-bar: var(--border-2);
 
-    --shadow-pop: 0 1px 2px rgba(20, 18, 14, 0.06),
-    0 12px 32px rgba(20, 18, 14, 0.14), 0 32px 64px rgba(20, 18, 14, 0.1);
-    --shadow-card: 0 1px 2px rgba(20, 18, 14, 0.05), 0 4px 14px rgba(20, 18, 14, 0.06);
+  --shadow-pop:
+    0 1px 2px rgba(20, 18, 14, 0.06), 0 12px 32px rgba(20, 18, 14, 0.14),
+    0 32px 64px rgba(20, 18, 14, 0.1);
+  --shadow-card:
+    0 1px 2px rgba(20, 18, 14, 0.05), 0 4px 14px rgba(20, 18, 14, 0.06);
 
-    --syn-key: #9a4ec2;
-    --syn-fn: #2f6bd6;
-    --syn-str: #2f8a5b;
-    --syn-num: #c2691f;
-    --syn-com: #a8a49a;
-    --syn-punc: #6c6962;
+  --syn-key: #9a4ec2;
+  --syn-fn: #2f6bd6;
+  --syn-str: #2f8a5b;
+  --syn-num: #c2691f;
+  --syn-com: #a8a49a;
+  --syn-punc: #6c6962;
 
-    --row-pad-y: 11px;
-    --row-gap: 3px;
-    --list-title: 14.5px;
-    --list-meta: 12.5px;
+  --row-pad-y: 11px;
+  --row-gap: 3px;
+  --list-title: 14.5px;
+  --list-meta: 12.5px;
 
-    color: var(--text);
-    font-family: var(--font-ui);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .app.dark {
@@ -115,8 +118,8 @@
 html,
 body,
 #root {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 }
 #app {
   min-height: 100%;
@@ -128,11 +131,11 @@ body {
   box-sizing: border-box;
 }
 button {
-    font: inherit;
-    color: inherit;
-    background: none;
-    border: none;
-    cursor: default;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: default;
 }
 
 .app {
@@ -1447,7 +1450,11 @@ h1.doc-title {
   min-height: 100vh;
   height: auto;
   background:
-    linear-gradient(90deg, rgba(244, 243, 241, 0.94), rgba(255, 255, 255, 0.82)),
+    linear-gradient(
+      90deg,
+      rgba(244, 243, 241, 0.94),
+      rgba(255, 255, 255, 0.82)
+    ),
     var(--bg-app);
   overflow-x: hidden;
 }
@@ -1718,7 +1725,11 @@ h1.doc-title {
   min-height: 100vh;
   height: auto;
   background:
-    linear-gradient(120deg, rgba(247, 246, 243, 0.98), rgba(255, 255, 255, 0.9)),
+    linear-gradient(
+      120deg,
+      rgba(247, 246, 243, 0.98),
+      rgba(255, 255, 255, 0.9)
+    ),
     var(--bg-app);
 }
 .auth-scene {

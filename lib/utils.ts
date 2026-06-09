@@ -1,4 +1,4 @@
-import { clsx} from 'clsx'
+import { clsx } from 'clsx'
 import type { ClassValue } from 'clsx'
 import { ConvexError } from 'convex/values'
 import { twMerge } from 'tailwind-merge'

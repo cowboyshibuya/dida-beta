@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import { devtools } from '@tanstack/devtools-vite'
-import path from 'node:path';
+import path from 'node:path'
 
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 
@@ -13,7 +13,7 @@ const config = defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-    tsconfigPaths: true
+    tsconfigPaths: true,
   },
   plugins: [
     devtools(),

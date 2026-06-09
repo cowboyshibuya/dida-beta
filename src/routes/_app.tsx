@@ -1,4 +1,9 @@
-import { createFileRoute, Outlet, useLocation, useNavigate } from '@tanstack/react-router'
+import {
+  createFileRoute,
+  Outlet,
+  useLocation,
+  useNavigate,
+} from '@tanstack/react-router'
 import { useConvexAuth } from '@convex-dev/auth/react'
 import { Toaster } from 'sonner'
 import { useEffect } from 'react'

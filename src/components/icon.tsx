@@ -6,7 +6,11 @@ const ICN = {
   plus: 'M12 5v14M5 12h14',
   sidebar: ['M4 5.5h16v13H4zM9.5 5.5v13'],
   more: 'M6 12h.01M12 12h.01M18 12h.01',
-  share: ['M12 3v13', 'M8 7l4-4 4 4', 'M5 13v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6'],
+  share: [
+    'M12 3v13',
+    'M8 7l4-4 4 4',
+    'M5 13v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6',
+  ],
   chevR: 'M9 6l6 6-6 6',
   chevD: 'M6 9l6 6 6-6',
   hash: 'M9 4 7 20M17 4l-2 16M5 9h14M4 15h14',
@@ -55,7 +59,11 @@ const ICN = {
   image: ['M4 5h16v14H4z', 'M4 16l4-4 3 3 4-5 5 6'],
   divider: 'M4 12h16',
   cornerDown: 'M4 5v6a3 3 0 0 0 3 3h13M16 10l4 4-4 4',
-  trash: ['M5 7h14', 'M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2', 'M6 7l1 13h10l1-13'],
+  trash: [
+    'M5 7h14',
+    'M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2',
+    'M6 7l1 13h10l1-13',
+  ],
 } as const
 
 export type IconName = keyof typeof ICN

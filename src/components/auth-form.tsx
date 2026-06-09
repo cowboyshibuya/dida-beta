@@ -97,7 +97,11 @@ export function AuthPage({ mode }: { mode: AuthMode }) {
             </span>
             <div>
               <h2>{title}</h2>
-              <p>{isSignup ? 'Start with email and password.' : 'Continue to your notes.'}</p>
+              <p>
+                {isSignup
+                  ? 'Start with email and password.'
+                  : 'Continue to your notes.'}
+              </p>
             </div>
           </div>
 
@@ -184,7 +188,8 @@ export function AuthPage({ mode }: { mode: AuthMode }) {
 }
 
 function safeRedirect(value: string | undefined) {
-  if (!value || !value.startsWith('/') || value.startsWith('//')) return '/notes'
+  if (!value || !value.startsWith('/') || value.startsWith('//'))
+    return '/notes'
   if (value === '/login' || value.startsWith('/login?')) return '/notes'
   if (value === '/signup' || value.startsWith('/signup?')) return '/notes'
   return value
@@ -192,9 +197,12 @@ function safeRedirect(value: string | undefined) {
 
 function authErrorMessage(error: unknown, isSignup: boolean) {
   const message = error instanceof Error ? error.message : String(error)
-  if (/invalid credentials/i.test(message)) return 'The email or password is incorrect.'
-  if (/invalid password/i.test(message)) return 'Use a password with at least 8 characters.'
-  if (/already|exists/i.test(message)) return 'An account already exists for this email.'
+  if (/invalid credentials/i.test(message))
+    return 'The email or password is incorrect.'
+  if (/invalid password/i.test(message))
+    return 'Use a password with at least 8 characters.'
+  if (/already|exists/i.test(message))
+    return 'An account already exists for this email.'
   return isSignup
     ? 'Could not create that account. Check the details and try again.'
     : 'Could not sign in. Check the details and try again.'

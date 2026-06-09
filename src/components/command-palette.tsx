@@ -80,7 +80,9 @@ export function CommandPalette() {
             )}
 
             <Command.Group>
-              <div className="pal-group">{showRecent ? 'Recent' : 'Results'}</div>
+              <div className="pal-group">
+                {showRecent ? 'Recent' : 'Results'}
+              </div>
               {list.map((n) => (
                 <Command.Item
                   key={n._id}

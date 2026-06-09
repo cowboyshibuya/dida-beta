@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { useEditor, EditorContent, type Editor as TipTapEditor } from '@tiptap/react'
+import {
+  useEditor,
+  EditorContent,
+  type Editor as TipTapEditor,
+} from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import TaskList from '@tiptap/extension-task-list'
 import TaskItem from '@tiptap/extension-task-item'
@@ -9,11 +13,7 @@ import Placeholder from '@tiptap/extension-placeholder'
 import { createLowlight, common } from 'lowlight'
 import { Callout } from './callout'
 import { CodeBlock } from './code-block'
-import {
-  SlashMenu,
-  filterSlash,
-  type SlashItem,
-} from './slash-menu'
+import { SlashMenu, filterSlash, type SlashItem } from './slash-menu'
 
 const lowlight = createLowlight(common)
 
@@ -29,8 +29,11 @@ function deriveType(editor: TipTapEditor): NoteContentPatch['type'] {
   const nodes = (json.content ?? []) as { type?: string }[]
   const types = nodes.map((n) => n.type)
   if (types[0] === 'codeBlock') return 'code'
-  const lists = types.filter((t) => t === 'taskList' || t === 'bulletList' || t === 'orderedList').length
-  if (lists > 0 && lists >= types.filter((t) => t === 'paragraph' && t).length) return 'list'
+  const lists = types.filter(
+    (t) => t === 'taskList' || t === 'bulletList' || t === 'orderedList',
+  ).length
+  if (lists > 0 && lists >= types.filter((t) => t === 'paragraph' && t).length)
+    return 'list'
   return 'doc'
 }
 
@@ -100,15 +103,12 @@ export function Editor({
     }))
   }, [])
 
-  const pickSlash = useCallback(
-    (editor: TipTapEditor, item: SlashItem) => {
-      const s = slashRef.current
-      if (!s) return
-      item.run(editor, s.range)
-      setSlash(null)
-    },
-    [],
-  )
+  const pickSlash = useCallback((editor: TipTapEditor, item: SlashItem) => {
+    const s = slashRef.current
+    if (!s) return
+    item.run(editor, s.range)
+    setSlash(null)
+  }, [])
 
   const editorRef = useRef<TipTapEditor | null>(null)
 
@@ -152,7 +152,8 @@ export function Editor({
           if (event.key === 'Enter' || event.key === 'Tab') {
             if (s.items.length === 0) return false
             event.preventDefault()
-            if (editorRef.current) pickSlash(editorRef.current, s.items[s.active])
+            if (editorRef.current)
+              pickSlash(editorRef.current, s.items[s.active])
             return true
           }
           if (event.key === 'Escape') {

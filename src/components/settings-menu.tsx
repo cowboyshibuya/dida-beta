@@ -42,10 +42,7 @@ export function SettingsMenu() {
           style={{ position: 'absolute', bottom: 32, right: 0 }}
         >
           <div className="menu-label">Appearance</div>
-          <button
-            className="menu-item"
-            onClick={() => theme.setMode('light')}
-          >
+          <button className="menu-item" onClick={() => theme.setMode('light')}>
             <Icon name="sun" size={15} /> Light
             {theme.mode === 'light' && (
               <span className="chk">

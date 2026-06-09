@@ -8,8 +8,7 @@ export function formatDate(ts: number): string {
 
   if (days <= 0) return 'Today'
   if (days === 1) return 'Yesterday'
-  if (days < 7)
-    return d.toLocaleDateString(undefined, { weekday: 'short' })
+  if (days < 7) return d.toLocaleDateString(undefined, { weekday: 'short' })
   return d.toLocaleDateString(undefined, { month: 'short', day: '2-digit' })
 }
 
