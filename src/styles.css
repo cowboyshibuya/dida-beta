@@ -1459,6 +1459,7 @@ h1.doc-title {
   overflow-x: hidden;
 }
 .home-nav,
+.home-brand,
 .auth-brand {
   display: flex;
   align-items: center;
@@ -1504,13 +1505,13 @@ h1.doc-title {
 }
 .home-nav nav .home-nav-cta,
 .home-primary {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--accent);
+  color: var(--text-3);
 }
 .home-nav nav .home-nav-cta:hover,
 .home-primary:hover {
-  color: var(--bg);
-  background: #2a2825;
+  color: var(--text);
+  background: var(--accent-soft);
 }
 .home-hero {
   min-height: calc(100vh - 72px);

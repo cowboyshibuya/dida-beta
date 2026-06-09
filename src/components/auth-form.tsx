@@ -80,6 +80,7 @@ export function AuthPage({ mode }: { mode: AuthMode }) {
         <Link to="/" className="auth-brand" aria-label="Dida home">
           <span className="mark" />
           <span>Dida</span>
+          <span className='px-2 py-1 border border-black/20 rounded-full bg-secondary text-primary text-xs font-light'>Beta</span>
         </Link>
 
         <section className="auth-copy" aria-label="Dida">

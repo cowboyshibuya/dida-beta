@@ -12,9 +12,11 @@ function Home() {
   return (
     <div className="app public-home">
       <header className="home-nav">
-        <Link to="/" className="home-brand" aria-label="Dida home">
+        <Link to="/" className="home-brand inline-flex " aria-label="Dida home">
           <span className="mark" />
           <span>Dida</span>
+          <span className='px-2 py-1 border border-black/20 rounded-full bg-secondary text-primary text-xs font-light'>Beta</span>
+
         </Link>
         <nav>
           <Link to="/login">Sign in</Link>
