@@ -1,6 +1,7 @@
 import { Link, useNavigate, useSearch } from '@tanstack/react-router'
 import { useAuthActions, useConvexAuth } from '@convex-dev/auth/react'
-import { FormEvent, useEffect, useMemo, useState } from 'react'
+import type { FormEvent} from 'react';
+import { useEffect, useMemo, useState } from 'react'
 import { Icon } from './icon'
 
 type AuthMode = 'login' | 'signup'
@@ -13,7 +14,7 @@ export function AuthPage({ mode }: { mode: AuthMode }) {
   const { signIn } = useAuthActions()
   const auth = useConvexAuth()
   const navigate = useNavigate()
-  const search = useSearch({ strict: false }) as AuthSearch
+  const search = useSearch({ strict: false })
   const redirectTo = safeRedirect(search.redirect)
 
   const [email, setEmail] = useState('')

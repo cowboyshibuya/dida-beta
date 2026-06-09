@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from 'react'
 import { toast } from 'sonner'
 import { Toolbar } from '@/components/toolbar'
 import { Icon } from '@/components/icon'
-import { Editor, type NoteContentPatch } from '@/components/editor/editor'
+import { Editor  } from '@/components/editor/editor'
+import type {NoteContentPatch} from '@/components/editor/editor';
 import { TagEditor } from '@/components/editor/tag-editor'
 import {
   useNote,

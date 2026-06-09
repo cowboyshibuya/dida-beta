@@ -87,7 +87,7 @@ export function Sidebar() {
   const createNote = useCreateNote()
   const { toggleSidebar, setPaletteOpen } = useUi()
   const navigate = useNavigate()
-  const params = useParams({ strict: false }) as { noteId?: string }
+  const params = useParams({ strict: false })
   const activeId = params.noteId
 
   const pinned = (notes ?? []).filter((n) => n.pinned)

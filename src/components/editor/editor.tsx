@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import {
   useEditor,
-  EditorContent,
-  type Editor as TipTapEditor,
+  EditorContent
+  
 } from '@tiptap/react'
+import type {Editor as TipTapEditor} from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit'
 import TaskList from '@tiptap/extension-task-list'
 import TaskItem from '@tiptap/extension-task-item'
@@ -13,7 +14,8 @@ import Placeholder from '@tiptap/extension-placeholder'
 import { createLowlight, common } from 'lowlight'
 import { Callout } from './callout'
 import { CodeBlock } from './code-block'
-import { SlashMenu, filterSlash, type SlashItem } from './slash-menu'
+import { SlashMenu, filterSlash  } from './slash-menu'
+import type {SlashItem} from './slash-menu';
 
 const lowlight = createLowlight(common)
 

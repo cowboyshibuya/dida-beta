@@ -2,9 +2,10 @@ import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight'
 import {
   NodeViewContent,
   NodeViewWrapper,
-  ReactNodeViewRenderer,
-  type ReactNodeViewProps,
+  ReactNodeViewRenderer
+  
 } from '@tiptap/react'
+import type {ReactNodeViewProps} from '@tiptap/react';
 import { toast } from 'sonner'
 import { Icon } from '../icon'
 
